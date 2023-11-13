@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import Error from "../pages/Error";
 import { gsap } from "gsap";
 
+
 const completeCall = (target, parent) => {
   gsap.set(target, { clearProps: "position, width" });
   parent && gsap.set(parent, { clearProps: "overflow" });
@@ -22,13 +23,13 @@ const Routes = (props) => {
     gsap.set(node, {
       // position: "absolute", 
       left: 0,
-      y: 50, 
+      y: 50,
       autoAlpha: 0
     });
     gsap.set(parentNode.current, { overflow: "hidden" })
     // Create the animation for the incoming component
     gsap.to(node, {
-      duration: 0.5, 
+      duration: 0.5,
       autoAlpha: 1,
       y: 0,
       onComplete: completeCall,
@@ -46,7 +47,7 @@ const Routes = (props) => {
     });
     // Create the animation for the incoming component
     gsap.to(node, {
-      duration:0.5, 
+      duration: 0.5,
       autoAlpha: 0,
       y: -50
     });

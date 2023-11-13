@@ -6,11 +6,11 @@ import Routes from "./routes/routes";
 const App = () => {
   return (
     <main className='App'>
-    <Router>
-      <Route path="/" component={Routes} />
-    </Router>
+      <Router>
+        <Route path="/" component={Routes} />
+      </Router>
     </main>
-      );
+  );
 };
 
 export default App;
