@@ -163,8 +163,8 @@ html {
         font-size: 1rem
     }
 
-    .about-details .skills li .skill-time a {
-        color: #0084ff
+    .about-details .skills li .skill-time > a {
+        color: #0084ff !important;
     }
 
     .about-details .skills li .skill-time a:hover {
@@ -174,7 +174,10 @@ html {
     .home-container .my-name h1 {
         font-size: 2rem;
         position: relative;
-        display: inline-block
+        display: inline-block;
+        background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     }
 
     .home-container .my-name h1::after {
@@ -190,6 +193,9 @@ html {
 
     .home-container .my-name p {
         font-size: 1rem
+    }
+    .skills li .skill-time > a {
+        color: #0084ff !important;
     }
 }
 
@@ -216,6 +222,9 @@ html {
         position: absolute;
         bottom: 3rem
     }
+    .skills li .skill-time > a {
+        color: #0084ff !important;
+    }
 }
 
 @media (min-width:1000px) and (max-width:1199px) {
@@ -226,6 +235,9 @@ html {
     .about-details,
     .pro-details {
         padding-top: 3rem
+    }
+    .skills li .skill-time > a {
+        color: #0084ff !important;
     }
 }
 
@@ -238,11 +250,17 @@ html {
     .pro-details {
         padding-top: 0
     }
+    .skills li .skill-time > a {
+        color: #0084ff !important;
+    }
 }
 
 @media (min-width:1600px) and (max-width:1999px) {
     html {
         font-size: 18px
+    }
+        .skills li .skill-time > a {
+        color: #0084ff !important;
     }
 }
 
@@ -661,8 +679,9 @@ footer ul li a.gm {
     color: #1f1f1f;
     margin-bottom: 15px;
     position: relative;
-    display: inline-block
-}
+    display: inline-block;
+ 
+} 
 
 .home-container .my-name h1::after {
     content: "";
@@ -890,7 +909,7 @@ footer ul li a.gm {
 
 .about-details .work-exp-block .skills li .skill-name {
     color: #444;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     border-bottom: #ccc 1px solid;
     padding: 1rem 0;
@@ -1018,3 +1037,49 @@ nav.main-nav.active {
 nav.main-nav.active ul {
     display: block
 }
+.home-container .my-name{
+    position: relative;
+}
+.home-container .my-name h1{
+    background-image: linear-gradient(45deg,#ff7200,#5c00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home-container .my-name h1::before {
+    position: absolute;
+    content: attr(data-mt);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg,#5c00ff,#ff7200);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.home-container .my-name h1:hover::before {
+    opacity: 1;
+} 
+.about-details>div{
+    position: relative;
+}
+ 
+/* GRADIENT  */
+.page-heading {
+    color:#191335;
+    background-image:linear-gradient(to right, #191335, #191335 33.33333%, #01A5F8 66.66666%, #01BFD8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    background-position: top left;
+    transition:all 1s ease-in-out;
+  }
+  
+  .page-heading:hover {
+    background-position: top left 100%;
+  }
+ 

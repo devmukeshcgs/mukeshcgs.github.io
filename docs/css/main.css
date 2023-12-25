@@ -123,7 +123,7 @@ html {
       bottom: 0;
       font-size: 1rem; }
       .about-details .skills li .skill-time a {
-        color: #0084ff; }
+        color: #0084ff!important; }
         .about-details .skills li .skill-time a:hover {
           color: #1f1f1f; }
 
