@@ -1082,3 +1082,17 @@ nav.main-nav.active ul {
     background-position: top left 100%;
   }
  
+  /* GRADIENT */
+.page-heading {
+    color:#191335;
+    background-image:linear-gradient(to right, #191335, #191335 33.33333%, #01A5F8 66.66666%, #01BFD8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    background-position: top left;
+    transition:all 1s ease-in-out;
+  }
+  .page-heading:hover {
+    background-position: top left 100%;
+  }
+ 
